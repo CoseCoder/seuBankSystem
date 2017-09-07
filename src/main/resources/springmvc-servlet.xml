@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/mvc 
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<!-- 启用CGliB -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+
+	<!-- <context:component-scan base-package="com.screen.system.controller"/> -->
+	<context:component-scan base-package="group_seven.*.controller" />
+	<!--<context:component-scan base-package="screen.commons.scan" />-->
+
+	<!-- 配置结果页面 前缀和后缀 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="order" value="10"></property>
+		<property name="prefix" value="/WEB-INF/views/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+	<!-- 配置哪些是静态资源，缺省Servlet 直接返回 -->
+	<mvc:resources mapping="/static/**" location="/static/"
+		cache-period="31556926" />
+	<mvc:resources mapping="/favicon.ico" location="/static/style/images/favicon.ico"
+		cache-period="31556926" />
+	<mvc:resources mapping="/report/**" location="/report/" cache-period="31556926" />
+	<mvc:resources mapping="/freight/**" location="/freight/" cache-period="31556926" />
+
+	<mvc:annotation-driven>
+		<mvc:message-converters register-defaults="false">
+			<!-- 将StringHttpMessageConverter的默认编码设为UTF-8 -->
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<constructor-arg value="UTF-8" />
+			</bean>
+			<ref bean="jacksonMessageConverter" />
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<bean id="jacksonMessageConverter"
+		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>text/html;charset=UTF-8</value>
+				<value>application/json;charset=UTF-8</value>
+			</list>
+		</property>
+		<property name="objectMapper" ref="objectMapper" />
+	</bean>
+
+	<bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper">
+		<property name="timeZone">
+			<bean class="java.util.TimeZone" factory-method="getTimeZone">
+				<constructor-arg value="GMT+08" />
+			</bean>
+		</property>
+		<property name="dateFormat">
+			<bean class="java.text.SimpleDateFormat">
+				<constructor-arg type="java.lang.String" value="yyyy-MM-dd HH:mm:ss" />
+			</bean>
+		</property>
+	</bean>
+
+	<!-- 文件上传 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 设置上传文件总大小限制 -->
+		<property name="maxUploadSize" value="10000000000"></property>
+		<property name="defaultEncoding" value="utf-8"></property>
+	    <property name="maxInMemorySize" value="1"></property>  
+	</bean>
+	
+	<!-- SpringMVC在超出上传文件限制时，会抛出org.springframework.web.multipart.MaxUploadSizeExceededException -->  
+    <!-- 该异常是SpringMVC在检查上传的文件信息时抛出来的，而且此时还没有进入到Controller方法中 -->  
+    <bean id="exceptionResolver"  
+        class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">  
+        <property name="exceptionMappings">  
+            <props>  
+                <!-- 遇到MaxUploadSizeExceededException异常时，自动跳转到/WEB-INF/jsp/error_fileupload.jsp页面 -->  
+                <prop  
+                    key="org.springframework.web.multipart.MaxUploadSizeExceededException">/error/500</prop>  
+            </props>  
+        </property>  
+    </bean>
+
+</beans>
