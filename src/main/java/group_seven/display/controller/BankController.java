@@ -48,15 +48,19 @@ public class BankController {
 	@ResponseBody
 	public Object userDistributionInfo() {
 		List<CityUser> list = bankService.getCityUserList();
-		Map<String, ArrayList<Float>> map = new HashMap<String,ArrayList<Float>>();
-		ArrayList<Float> array=new ArrayList<>();
-		for(CityUser bean : list) {
-		    array.clear();
-		    array.add(Float.valueOf(bean.getyData()));
-            array.add(Float.valueOf(bean.getxData()));
-            array.add(Float.valueOf(bean.getCardAmount()));
-			map.put(bean.getCity(),array);
+
+
+		ArrayList<Map<String,ArrayList<Float>>> result= new ArrayList<Map<String,ArrayList<Float>>>();
+
+		for(CityUser item : list) {
+            ArrayList<Float> array=new ArrayList<>();
+            Map<String, ArrayList<Float>> map = new HashMap<String,ArrayList<Float>>();
+		    array.add(Float.valueOf(item.getyData()));
+            array.add(Float.valueOf(item.getxData()));
+            array.add(Float.valueOf(item.getCardAmount()));
+			map.put(item.getCity(),array);
+			result.add(map);
 		}
-		return map;
+		return result;
 	}
 }
