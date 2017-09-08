@@ -23,7 +23,6 @@ function userdistributioninfo(){
 		url:"/report/userdistributioninfo",
 		dataType:"json",
 		success:function(d){
-		    console.log(d)
 			showUserDistributionInfo(d)
 		}
 	})
@@ -35,7 +34,7 @@ function billdistributioninfo(){
 		url:"/report/billdistributioninfo",
 		dataType:"json",
 		success:function(d){
-			showBillDistributionInfo()
+			showBillDistributionInfo(d)
 		}
 	})
 }
@@ -135,7 +134,7 @@ function showUserDistributionInfo(d){
 	}
 	userDistributionChart.setOption(option)
 }
-function showBillDistributionInfo(){
+function showBillDistributionInfo(d){
 	var billDistributionChart=echarts.init(document.getElementById('billDistributionChart'))
 	var option = {
 		title : {
@@ -185,42 +184,6 @@ function showBillDistributionInfo(){
     		}
     	},
     	data:d[1]
-//    	data:[
-//    	{name: '北京',value: Math.round(Math.random()*1000)},
-//    	{name: '天津',value: Math.round(Math.random()*1000)},
-//    	{name: '上海',value: Math.round(Math.random()*1000)},
-//    	{name: '重庆',value: Math.round(Math.random()*1000)},
-//    	{name: '河北',value: Math.round(Math.random()*1000)},
-//    	{name: '河南',value: Math.round(Math.random()*1000)},
-//    	{name: '云南',value: Math.round(Math.random()*1000)},
-//    	{name: '辽宁',value: Math.round(Math.random()*1000)},
-//    	{name: '黑龙江',value: Math.round(Math.random()*1000)},
-//    	{name: '湖南',value: Math.round(Math.random()*1000)},
-//    	{name: '安徽',value: Math.round(Math.random()*1000)},
-//    	{name: '山东',value: Math.round(Math.random()*1000)},
-//    	{name: '新疆',value: Math.round(Math.random()*1000)},
-//    	{name: '江苏',value: Math.round(Math.random()*1000)},
-//    	{name: '浙江',value: Math.round(Math.random()*1000)},
-//    	{name: '江西',value: Math.round(Math.random()*1000)},
-//    	{name: '湖北',value: Math.round(Math.random()*1000)},
-//    	{name: '广西',value: Math.round(Math.random()*1000)},
-//    	{name: '甘肃',value: Math.round(Math.random()*1000)},
-//    	{name: '山西',value: Math.round(Math.random()*1000)},
-//    	{name: '内蒙古',value: Math.round(Math.random()*1000)},
-//    	{name: '陕西',value: Math.round(Math.random()*1000)},
-//    	{name: '吉林',value: Math.round(Math.random()*1000)},
-//    	{name: '福建',value: Math.round(Math.random()*1000)},
-//    	{name: '贵州',value: Math.round(Math.random()*1000)},
-//    	{name: '广东',value: Math.round(Math.random()*1000)},
-//    	{name: '青海',value: Math.round(Math.random()*1000)},
-//    	{name: '西藏',value: Math.round(Math.random()*1000)},
-//    	{name: '四川',value: Math.round(Math.random()*1000)},
-//    	{name: '宁夏',value: Math.round(Math.random()*1000)},
-//    	{name: '海南',value: Math.round(Math.random()*1000)},
-//    	{name: '台湾',value: Math.round(Math.random()*1000)},
-//    	{name: '香港',value: Math.round(Math.random()*1000)},
-//    	{name: '澳门',value: Math.round(Math.random()*1000)}
-//    	]
     },
     {
     	name: '存入',
@@ -235,42 +198,6 @@ function showBillDistributionInfo(){
     		}
     	},
     	data:d[0]
-//    	data:[
-//    	{name: '北京',value: Math.round(Math.random()*1000)},
-//    	{name: '天津',value: Math.round(Math.random()*1000)},
-//    	{name: '上海',value: Math.round(Math.random()*1000)},
-//    	{name: '重庆',value: Math.round(Math.random()*1000)},
-//    	{name: '河北',value: Math.round(Math.random()*1000)},
-//    	{name: '河南',value: Math.round(Math.random()*1000)},
-//    	{name: '云南',value: Math.round(Math.random()*1000)},
-//    	{name: '辽宁',value: Math.round(Math.random()*1000)},
-//    	{name: '黑龙江',value: Math.round(Math.random()*1000)},
-//    	{name: '湖南',value: Math.round(Math.random()*1000)},
-//    	{name: '安徽',value: Math.round(Math.random()*1000)},
-//    	{name: '山东',value: Math.round(Math.random()*1000)},
-//    	{name: '新疆',value: Math.round(Math.random()*1000)},
-//    	{name: '江苏',value: Math.round(Math.random()*1000)},
-//    	{name: '浙江',value: Math.round(Math.random()*1000)},
-//    	{name: '江西',value: Math.round(Math.random()*1000)},
-//    	{name: '湖北',value: Math.round(Math.random()*1000)},
-//    	{name: '广西',value: Math.round(Math.random()*1000)},
-//    	{name: '甘肃',value: Math.round(Math.random()*1000)},
-//    	{name: '山西',value: Math.round(Math.random()*1000)},
-//    	{name: '内蒙古',value: Math.round(Math.random()*1000)},
-//    	{name: '陕西',value: Math.round(Math.random()*1000)},
-//    	{name: '吉林',value: Math.round(Math.random()*1000)},
-//    	{name: '福建',value: Math.round(Math.random()*1000)},
-//    	{name: '贵州',value: Math.round(Math.random()*1000)},
-//    	{name: '广东',value: Math.round(Math.random()*1000)},
-//    	{name: '青海',value: Math.round(Math.random()*1000)},
-//    	{name: '西藏',value: Math.round(Math.random()*1000)},
-//    	{name: '四川',value: Math.round(Math.random()*1000)},
-//    	{name: '宁夏',value: Math.round(Math.random()*1000)},
-//    	{name: '海南',value: Math.round(Math.random()*1000)},
-//    	{name: '台湾',value: Math.round(Math.random()*1000)},
-//    	{name: '香港',value: Math.round(Math.random()*1000)},
-//    	{name: '澳门',value: Math.round(Math.random()*1000)}
-//    	]
     },
 
     ]
@@ -278,7 +205,7 @@ function showBillDistributionInfo(){
 billDistributionChart.setOption(option)
 }
 
-function showConsumptionTypeInfo(){
+function showConsumptionTypeInfo(d){
 	var consumptionTypeChart=echarts.init(document.getElementById('consumptionTypeChart'))
 	var option = {
     title : {
@@ -300,13 +227,7 @@ function showConsumptionTypeInfo(){
             type: 'pie',
             radius : '55%',
             center: ['50%', '60%'],
-            data:[
-                {value:335, name:'购物'},
-                {value:310, name:'外卖'},
-                {value:234, name:'水电费'},
-                {value:135, name:'游戏'},
-                {value:1548, name:'QQ充值'}
-            ],
+            data:d,
             itemStyle: {
                 emphasis: {
                     shadowBlur: 10,

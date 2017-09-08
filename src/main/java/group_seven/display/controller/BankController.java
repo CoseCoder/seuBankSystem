@@ -61,18 +61,13 @@ public class BankController {
     @RequestMapping(value="/billdistributioninfo",method = RequestMethod.GET)
     @ResponseBody
     public Object billDistributionInfo() {
-        List<ProvinceIDToName> provinceIDToNameList=bankService.getProvinceIDToNameList();
-        String [] convertTo=new String[50];
-        for(ProvinceIDToName item:provinceIDToNameList){
-            convertTo[Integer.valueOf(item.getProvinceID())]=item.getProvinceName();
-        }
         List<BillInfo> billInfoList=bankService.getBillInfoList();
         JSONArray result=new JSONArray();
         JSONArray depositList=new JSONArray();
         JSONArray withdrawlList=new JSONArray();
         for(BillInfo item:billInfoList){
             JSONObject obj=new JSONObject();
-            obj.put("name",convertTo[Integer.valueOf(item.getProvince())]);
+            obj.put("name",item.getProvince());
             obj.put("value",item.getMoney());
             if(item.getBillType()==1)
                 depositList.add(obj);

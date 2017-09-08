@@ -5,5 +5,5 @@ import java.util.List;
 import group_seven.display.model.PersonalConsumption;
 
 public interface PersonalConsumptionMapper {
-	List<PersonalConsumption> getPersonalConsumptionList(String cardNumber);
+    List<PersonalConsumption> getPersonalConsumptionList(String cardNumber);
 }

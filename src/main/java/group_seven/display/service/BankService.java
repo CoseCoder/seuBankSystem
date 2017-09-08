@@ -11,7 +11,5 @@ public interface BankService {
 
 	List<BillInfo> getBillInfoList();
 
-    List<ProvinceIDToName> getProvinceIDToNameList();
-
 	List<PersonalConsumption> getPersonalConsumptionList(String cardNumber);
 }

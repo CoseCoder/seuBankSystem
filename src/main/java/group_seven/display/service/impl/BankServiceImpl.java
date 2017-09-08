@@ -38,14 +38,6 @@ public class BankServiceImpl implements BankService{
 	}
 
 	@Autowired
-	private ProvinceIDToNameMapper provinceIDToNameMapper;
-	@Override
-	public List<ProvinceIDToName> getProvinceIDToNameList() {
-		return provinceIDToNameMapper.getProvinceIDToNameList();
-	}
-
-
-	@Autowired
 	private PersonalConsumptionMapper personalConsumptionMapper;
     @Override
 	public List<PersonalConsumption> getPersonalConsumptionList(String cardNumber) {
