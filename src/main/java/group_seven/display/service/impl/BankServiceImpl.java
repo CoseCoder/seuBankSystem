@@ -30,6 +30,25 @@ public class BankServiceImpl implements BankService{
 		return cityUserMapper.getCityUserList();
 	}
 
+	@Autowired
+	private BillInfoMapper billInfoMapper;
+	@Override
+	public List<BillInfo> getBillInfoList() {
+		return billInfoMapper.getBillInfoList();
+	}
+
+	@Autowired
+	private ProvinceIDToNameMapper provinceIDToNameMapper;
+	@Override
+	public List<ProvinceIDToName> getProvinceIDToNameList() {
+		return provinceIDToNameMapper.getProvinceIDToNameList();
+	}
 
 
+	@Autowired
+	private PersonalConsumptionMapper personalConsumptionMapper;
+    @Override
+	public List<PersonalConsumption> getPersonalConsumptionList(String cardNumber) {
+		return personalConsumptionMapper.getPersonalConsumptionList(cardNumber);
+	}
 }
