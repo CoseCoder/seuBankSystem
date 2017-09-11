@@ -31,7 +31,7 @@
         <shiro.version>1.2.4</shiro.version>
         <jackson.version>2.6.6</jackson.version>
         <scala.version>2.11.8</scala.version>
-        <spark.version>2.2.0</spark.version>
+        <spark.version>2.0.0</spark.version>
     </properties>
 
     <dependencies>
@@ -50,18 +50,18 @@
             <scope>test</scope>
         </dependency>
         <!-- test end -->
-        <!--<dependency>-->
-            <!--<groupId>javax.servlet</groupId>-->
-            <!--<artifactId>javax.servlet-api</artifactId>-->
-            <!--<version>${servlet.version}</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>jsp-api</artifactId>
-            <version>2.0</version>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.version}</version>
             <scope>provided</scope>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet</groupId>-->
+            <!--<artifactId>jsp-api</artifactId>-->
+            <!--<version>2.0</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
