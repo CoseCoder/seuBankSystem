@@ -1,20 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <title>ECharts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>银行大数据分析平台</title>
     <!-- 引入 echarts.js -->
     <script src="static/js/echarts.min.js"></script>
     <script src="static/js/jquery-3.2.1.min.js"></script>
     <script src="static/js/report.js"></script>
     <script src="static/js/china.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 <body>
-    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="tradeTypeChart" style="width: 600px;height:400px;"></div>
-    <div id="userDistributionChart" style="width: 600px;height:400px;"></div>
-    <div id="billDistributionChart" style="width: 600px;height:400px;"></div>
-    <div id="consumptionTypeChart" style="width: 600px;height:400px;"></div>
-    
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">银行大数据分析平台</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-2">
+                <h1 class="page-header">统计报表</h1>
+            </div>
+            <div class="col-sm-2">
+                <nav>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="#">统计报表</a></li>
+                        <li><a href="#">风险管理</a></li>
+                        <li><a href="#">用户画像</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-sm-5">
+                <h3>用户交易工具统计</h3>
+                <div id="tradeTypeChart" style="min-height: 400px"></div>
+                <br>
+                <h3>账单分布统计</h3>
+                <div id="billDistributionChart" style="min-height: 400px"></div>
+            </div>
+            <div class="col-sm-5">
+                <h3>用户主要城市分布</h3>
+                <div id="userDistributionChart" style="min-height: 400px"></div>
+                <br>
+                <h3>用户消费类型统计</h3>
+                <div id="consumptionTypeChart" style="min-height: 400px"></div>
+            </div>            
+        </div>
+    </div>
+
+
 </body>
 </html>

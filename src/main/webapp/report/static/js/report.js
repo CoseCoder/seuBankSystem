@@ -62,7 +62,7 @@ function showTradeTypeInfo(alipay,wechatpay,tenpay){
 		},
 		radiusAxis: {
 			type: 'category',
-			data: ['财付通', '微信支付', '支付宝'],
+			data: ['财付通', '微信支付', '支付宝',''],
 			z: 10,
 			show:false
 		},
@@ -70,29 +70,38 @@ function showTradeTypeInfo(alipay,wechatpay,tenpay){
 		},
 		series: [{
 			type: 'bar',
-			data: [tenpay, 0, 0],
+			data: [0,tenpay, 0, 0,0],
 			coordinateSystem: 'polar',
 			name: '财付通',
 			stack:'s',
 			barWidth:100,
 		}, {
 			type: 'bar',
-			data: [0, wechatpay, 0],
+			data: [0,0, wechatpay, 0],
 			coordinateSystem: 'polar',
 			name: '微信支付',
 			stack:'s',
 			barWidth:100
 		}, {
 			type: 'bar',
-			data: [0, 0, alipay],
+			data: [0,0, 0, alipay],
 			coordinateSystem: 'polar',
 			name: '支付宝',
 			stack:'s',
 			barWidth:100
-		}],
+		},{
+          			type: 'bar',
+          			data: [0, 0, 0,0],
+          			coordinateSystem: 'polar',
+          			name:"",
+          			stack:'s',
+          			barWidth:100
+          		}],
 		legend: {
 			show: true,
-			data: ['支付宝', '微信支付', '财付通']
+			data: ['支付宝', '微信支付', '财付通'],
+			orient:'vertical',
+			left:'left',
 		}
 	}
 	tradeTypeChart.setOption(option)
@@ -109,7 +118,7 @@ function showUserDistributionInfo(d){
 		},
 		geo:{
 			map:'china',
-			roam:true,
+			//roam:true,
 			label:{
 				emphasis:{
 					show:false
@@ -137,10 +146,6 @@ function showUserDistributionInfo(d){
 function showBillDistributionInfo(d){
 	var billDistributionChart=echarts.init(document.getElementById('billDistributionChart'))
 	var option = {
-		title : {
-			text: '账单交易分布',
-			left: 'center'
-		},
 		tooltip : {
 			trigger: 'item'
 		},
@@ -151,7 +156,7 @@ function showBillDistributionInfo(d){
 		},
 		visualMap: {
 			min: 0,
-			max: 2500,
+			max: 3000,
 			left: 'left',
 			top: 'bottom',
         text:['高','低'],           // 文本，默认为数值文本
@@ -208,10 +213,6 @@ billDistributionChart.setOption(option)
 function showConsumptionTypeInfo(d){
 	var consumptionTypeChart=echarts.init(document.getElementById('consumptionTypeChart'))
 	var option = {
-    title : {
-        text: '资金走向',
-        x:'center'
-    },
     tooltip : {
         trigger: 'item',
         formatter: "{a} <br/>{b} : {c} ({d}%)"
@@ -223,7 +224,7 @@ function showConsumptionTypeInfo(d){
     },
     series : [
         {
-            name: '资金走向',
+            name: '消费类型',
             type: 'pie',
             radius : '55%',
             center: ['50%', '60%'],
