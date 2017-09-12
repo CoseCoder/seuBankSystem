@@ -1,6 +1,5 @@
 package group_seven.testdemo
 
-import java.sql.DriverManager
 import java.util.Properties
 
 import org.apache.spark.sql.{SQLContext, SparkSession}
@@ -41,31 +40,6 @@ object data_b_bill {
       .map(m=>(m._1,m._2,m._3,m._4,m._5,m._6,"异常时间"))
     //      .foreach(println)
 
-
-//    val url = "jdbc:mysql://localhost:3306/bank"
-//    val dbc = "jdbc:mysql://localhost:3306/bank?user=root&password=root&useSSL=false"
-//    Class.forName("com.mysql.jdbc.Driver").newInstance()
-//    val conn = DriverManager.getConnection(dbc)
-//    val driver = "com.mysql.jdbc.Driver"
-//    //    val url = "jdbc:mysql://localhost:3306/bank"
-//    val username = "root"
-//    val password = "root"
-//
-//    // do database insert
-//    try {
-//      Class.forName(driver)
-//      val connection = DriverManager.getConnection(url, username, password)
-//      val statement = conn.createStatement()
-//      if (statement.execute("CREATE TABLE IF NOT EXISTS exceptionaccount " +
-//        "(BillNumber varchar(50),Account varchar(19)," +
-//        "Money double,BillDate datetime,BillExInfo varchar(50)," +
-//        "BankSiteID varchar(8),ExReason varchar(50))"))
-//        println("create table exaccount success")
-//    }
-//    finally {
-//      conn.close
-//    }
-
     val sqlContext = new SQLContext(sc)
     import sqlContext.implicits._
 
@@ -81,37 +55,5 @@ object data_b_bill {
     prop.put("transformedBitIsBoolean", "true")
     prop.put("useSSL", "false")
     dfWriter.jdbc("jdbc:mysql://localhost:3306/bank"," exceptionaccount", prop)
-
-
-    //    //移动互联网日活跃用户（DAU）的统计
-    //    bill_data.map{m =>
-    //      val imei = m(bcfields.value.indexOf("IMEI"))//取出IMEI
-    //    val time = m(bcfields.value.indexOf("Time"))//取出Time
-    //      imei + ":" + time
-    //    }.distinct().map(_.split(":")).map(m => (m(1),1)).reduceByKey(_+_)
-    //      .foreach(m => println(m._1 + "日活动用户量是：" + m._2))
-    //
-    //    //移动互联网月活跃用户（MAU）的统计
-    //    bill_data.map{m =>
-    //      val imei = m(bcfields.value.indexOf("IMEI"))//取出IMEI
-    //    val time = m(bcfields.value.indexOf("Time")).substring(0,7)//取出Time
-    //      imei + ":" + time
-    //    }.distinct().map(_.split(":")).map(m => (m(1),1)).reduceByKey(_+_)
-    //      .foreach(m => println(m._1 + "月活动用户量是：" + m._2))
-    //
-    //    //统计在不同应用中的上行流量
-    //    bill_data.map(m => (m(bcfields.value.indexOf("APP")), m(bcfields.value.indexOf("UplinkBytes")).toInt))
-    //      .reduceByKey(_+_).foreach(m => println(m._1 + "应用上行的流量是：" + m._2))
-    //
-    //    //统计在不同应用中的下行流量
-    //    bill_data.map(m => (m(bcfields.value.indexOf("APP")), m(bcfields.value.indexOf("DownlinkBytes")).toInt))
-    //      .reduceByKey(_+_).foreach(m => println(m._1 + "应用下行的流量是：" + m._2))
-    //
-    //    //统计在不同应用中的上下行流量
-    //    bill_data.map(m => (m(bcfields.value.indexOf("APP")),
-    //      List(m(bcfields.value.indexOf("UplinkBytes")).toInt, m(bcfields.value.indexOf("DownlinkBytes")).toInt)))
-    //      .reduceByKey((a, b) => List(a(0)+b(0), a(1)+b(1)))
-    //      .foreach(m => println(m._1 + "应用上行的流量是：" + m._2(0) + "\t" +
-    //        "下行的流量是：" + m._2(1)))
   }
 }
