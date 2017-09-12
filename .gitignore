@@ -1,1 +1,5 @@
 /target
+/metastore_db
+/derby.log
+/spark-warehouse
+/src/main/resources/data
