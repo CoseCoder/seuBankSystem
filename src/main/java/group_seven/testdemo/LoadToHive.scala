@@ -52,8 +52,9 @@ object LoadToHive {
       "education", "marriage", "residence").registerTempTable("user_info")
     hiveContext.sql("create table IF NOT EXISTS user_info as " +
       "select * from user_info")
-    hiveContext.sql("select * from user_info").show()
+//    hiveContext.sql("select * from user_info").show()
 
+    hiveContext.sql("drop table overdue")
     //创建数据表overdue并插入数据
     var df2 = overdue.toDF("id", "label").registerTempTable("overdue")
     hiveContext.sql("create table IF NOT EXISTS overdue as " +
