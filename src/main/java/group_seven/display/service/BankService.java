@@ -12,4 +12,10 @@ public interface BankService {
 	List<BillInfo> getBillInfoList();
 
 	List<PersonalConsumption> getPersonalConsumptionList(String cardNumber);
+
+	List<CreditAll> getCreditAllList();
+
+	List<CreditCity> getCreditCityList();
+
+	List<CreditOne> getCreditOneList(String account);
 }

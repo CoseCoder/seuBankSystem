@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sparkts-0.4.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../spark-timeseries/target/sparkts-0.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

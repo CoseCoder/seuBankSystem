@@ -69,6 +69,6 @@ object data_b_bill {
     prop.put("transformedBitIsBoolean", "true")
     prop.put("useSSL", "false")
 
-    dfWriter.jdbc("jdbc:mysql://localhost:3306/bank", " exceptionaccount", prop)
+    dfWriter.jdbc("jdbc:mysql://localhost:3306/bank", "exceptionaccount", prop)
   }
 }

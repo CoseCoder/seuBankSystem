@@ -43,4 +43,25 @@ public class BankServiceImpl implements BankService{
 	public List<PersonalConsumption> getPersonalConsumptionList(String cardNumber) {
 		return personalConsumptionMapper.getPersonalConsumptionList(cardNumber);
 	}
+
+	@Autowired
+	private CreditAllMapper creditAllMapper;
+	@Override
+	public List<CreditAll> getCreditAllList() {
+		return creditAllMapper.getCreditAllList();
+	}
+
+	@Autowired
+	private  CreditCityMapper creditCityMapper;
+	@Override
+	public List<CreditCity> getCreditCityList() {
+		return creditCityMapper.getCreditCityList();
+	}
+
+	@Autowired
+	private CreditOneMapper creditOneMapper;
+	@Override
+	public List<CreditOne> getCreditOneList(String account) {
+		return creditOneMapper.getCreditOneList(account);
+	}
 }

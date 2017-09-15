@@ -1,4 +1,4 @@
-package group_seven.testdemo;
+package group_seven.testdemo.configtest;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;

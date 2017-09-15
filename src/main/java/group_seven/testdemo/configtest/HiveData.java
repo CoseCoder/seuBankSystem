@@ -1,4 +1,4 @@
-package group_seven.testdemo;
+package group_seven.testdemo.configtest;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -93,4 +93,60 @@ public class BankController {
         }
         return result;
     }
+    @RequestMapping(value = "/creditall",method=RequestMethod.GET)
+    @ResponseBody
+    public Object creditAll(){
+        List<CreditAll> list = bankService.getCreditAllList();
+        JSONArray result = new JSONArray();
+        for(CreditAll item : list){
+            JSONObject object = new JSONObject();
+            object.put("BillNumber",item.getBillNumber());
+            object.put("Account",item.getAccount());
+            object.put("Money",item.getMoney());
+            object.put("BillDate",item.getBillDate());
+            object.put("BillExInfo",item.getBillExInfo());
+            object.put("BillSite",item.getBillSite());
+            object.put("ExReason",item.getExReason());
+            result.add(object);
+        }
+
+        return result;
+    }
+
+    @RequestMapping(value = "/creditone", method = RequestMethod.GET)
+    @ResponseBody
+    public Object creditOne(String account){
+        List<CreditOne> list = bankService.getCreditOneList(account);
+        JSONArray result = new JSONArray();
+        for(CreditOne item : list){
+            JSONObject object = new JSONObject();
+            object.put("BillNumber",item.getBillNumber());
+            object.put("Account",item.getAccount());
+            object.put("Money",item.getMoney());
+            object.put("BillDate",item.getBillDate());
+            object.put("BillExInfo",item.getBillExInfo());
+            object.put("BillSite",item.getBillSite());
+            object.put("ExReason",item.getExReason());
+            result.add(object);
+        }
+        return result;
+    }
+
+    @RequestMapping(value = "/creditcity",method = RequestMethod.GET)
+    @ResponseBody
+    public Object creditCity(){
+        List<CreditCity> list = bankService.getCreditCityList();
+        JSONArray result = new JSONArray();
+        for(CreditCity item: list){
+            JSONArray array = new JSONArray();
+            JSONObject object = new JSONObject();
+            array.add(item.getyData());
+            array.add(item.getxData());
+            array.add(item.getAmount());
+            object.put("name",item.getCity());
+            object.put("value",array);
+            result.add(object);
+        }
+        return result;
+    }
 }
