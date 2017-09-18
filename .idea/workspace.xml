@@ -5,32 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a555729-c912-4902-8bcb-8d35061417a6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/Predict.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/report/static/js/report.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/east-south.iml" afterPath="$PROJECT_DIR$/east-south.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/conf/dev/config/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/conf/dev/config/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/display/controller/BankController.java" afterPath="$PROJECT_DIR$/src/main/java/group_seven/display/controller/BankController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/display/mapper/TradeTypeMapper.java" afterPath="$PROJECT_DIR$/src/main/java/group_seven/display/mapper/TradeTypeMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/display/model/TradeType.java" afterPath="$PROJECT_DIR$/src/main/java/group_seven/display/model/TradeType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/display/service/BankService.java" afterPath="$PROJECT_DIR$/src/main/java/group_seven/display/service/BankService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/display/service/impl/BankServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/group_seven/display/service/impl/BankServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/ClassifyUsers.scala" afterPath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/ClassifyUsers.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/LoadToHive.scala" afterPath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/LoadToHive.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/LogisticRegression.scala" afterPath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/LogisticRegression.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeriesModel.scala" afterPath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeriesModel.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/configtest/HiveApi.java" afterPath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/configtest/HiveApi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/data_b_bill.scala" afterPath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/data_b_bill.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sqlMapperXml/CreditAllMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/sqlMapperXml/CreditAllMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sqlMapperXml/CreditCityMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/sqlMapperXml/CreditCityMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sqlMapperXml/CreditOneMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/sqlMapperXml/CreditOneMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sqlMapperXml/TradeTypeMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/sqlMapperXml/TradeTypeMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/report/chart.html" afterPath="$PROJECT_DIR$/src/main/webapp/report/chart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/report/css/bootstrap.css" afterPath="$PROJECT_DIR$/src/main/webapp/report/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/report/static/js/china.js" afterPath="$PROJECT_DIR$/src/main/webapp/report/static/js/china.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/report/static/js/echarts.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/report/static/js/echarts.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/report/static/js/jquery-3.2.1.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/report/static/js/jquery-3.2.1.min.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,14 +18,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Predict.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Predict.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/Predict.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1242">
-              <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+            <state relative-caret-position="270">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding>
                 <element signature="e#30#57#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chart.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/report/chart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="351" column="55" lean-forward="false" selection-start-line="351" selection-start-column="55" selection-end-line="351" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11097">
+              <caret line="411" column="17" lean-forward="false" selection-start-line="411" selection-start-column="17" selection-end-line="411" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,7 +151,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/report/static/js/report2.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/report/chart2.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/report/chart3.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/report/chart.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/LogisticRegression.scala" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/data_b_bill.scala" />
@@ -165,6 +160,7 @@
         <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/ClassifyUsers.scala" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeriesModel.scala" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/Predict.scala" />
+        <option value="$PROJECT_DIR$/src/main/webapp/report/chart.html" />
       </list>
     </option>
   </component>
@@ -227,11 +223,6 @@
             <path>
               <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
               <item name="east-south" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
-              <item name="east-south" type="462c0819:PsiDirectoryNode" />
               <item name="spark-warehouse" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -250,6 +241,30 @@
               <item name="east-south" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
+              <item name="east-south" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
+              <item name="east-south" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
+              <item name="dev" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
+              <item name="east-south" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
+              <item name="dev" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
@@ -289,6 +304,29 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
+              <item name="east-south" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
+              <item name="east-south" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
+              <item name="east-south" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
@@ -338,7 +376,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Predict">
+  <component name="RunManager" selected="Maven.east-south">
     <configuration name="ClassifyUsers" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -836,22 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="411" column="17" lean-forward="false" selection-start-line="411" selection-start-column="17" selection-end-line="411" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/report/chart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/LogisticRegression.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -910,14 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/conf/dev/config/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/ClassifyUsers.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -954,11 +968,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/Predict.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1242">
-          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        <state relative-caret-position="270">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
             <element signature="e#30#57#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/conf/dev/config/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/report/chart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="351" column="55" lean-forward="false" selection-start-line="351" selection-start-column="55" selection-end-line="351" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11097">
+          <caret line="411" column="17" lean-forward="false" selection-start-line="411" selection-start-column="17" selection-end-line="411" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
