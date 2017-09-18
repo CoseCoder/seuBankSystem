@@ -14,7 +14,7 @@
 	<select id="findTradeTypeList" resultMap="BaseResultMap">
 		select BillExInfo,count(*) as Number from 
 		<include refid="tableName" />
-		where BillDate between #{0} and #{1} group by BillExInfo
+		 group by BillExInfo
 	</select>
 
 

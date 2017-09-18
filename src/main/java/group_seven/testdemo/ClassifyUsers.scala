@@ -19,7 +19,7 @@ object ClassifyUsers {
     prop.put("useSSL", "false")
 
     //从MySQL读取数据
-    val df = spark.read.jdbc("jdbc:mysql://60.205.171.171:3306/bank", "new_bankbill", prop)
+    val df = spark.read.jdbc("jdbc:mysql://60.205.171.171:3306/group7", "new_bankbill", prop)
     //        df.show()
 
     //处理数据，过滤数据
@@ -63,6 +63,6 @@ object ClassifyUsers {
 
     //将数据写入MySQL
     val dfWriter = ndf.write.mode("append")
-    dfWriter.jdbc("jdbc:mysql://60.205.171.171:3306/bank", "personas", prop)
+    dfWriter.jdbc("jdbc:mysql://60.205.171.171:3306/group7", "personas", prop)
   }
 }

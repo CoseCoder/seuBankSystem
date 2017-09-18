@@ -5,13 +5,13 @@ import java.util.List;
 import group_seven.display.model.*;
 
 public interface BankService {
-	List<TradeType> findTradeTypeList(String fromDate,String toDate);
+	List<TradeType> findTradeTypeList();
 
 	List<CityUser> getCityUserList();
 
 	List<BillInfo> getBillInfoList();
 
-	List<PersonalConsumption> getPersonalConsumptionList(String cardNumber);
+	List<PersonalConsumption> getPersonalConsumptionList();
 
 	List<CreditAll> getCreditAllList();
 

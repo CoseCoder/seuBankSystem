@@ -25,10 +25,8 @@ public class BankController {
 
 	@RequestMapping(value = "/tradetypeinfo", method = RequestMethod.GET)
 	@ResponseBody
-	public Object tradeTypeInfo(String fromDate, String toDate) {
-		String fromD=fromDate.concat("-01 00:00:00");
-		String toD=toDate.concat("-01 00:00:00");
-		List<TradeType> list= bankService.findTradeTypeList(fromD, toD);
+	public Object tradeTypeInfo() {
+		List<TradeType> list= bankService.findTradeTypeList();
 		Map<String,Long> result=new HashMap<String,Long>();
 		for (TradeType item:list) {
 			if(item.getTradetype().equals("支付宝"))
@@ -82,8 +80,8 @@ public class BankController {
 
     @RequestMapping(value="/consumptiontypeinfo",method = RequestMethod.GET)
     @ResponseBody
-    public Object consumptionTypeInfo(String cardNumber) {
-        List<PersonalConsumption> list = bankService.getPersonalConsumptionList(cardNumber);
+    public Object consumptionTypeInfo() {
+        List<PersonalConsumption> list = bankService.getPersonalConsumptionList();
         JSONArray result = new JSONArray();
         for(PersonalConsumption item : list) {
             JSONObject object = new JSONObject();

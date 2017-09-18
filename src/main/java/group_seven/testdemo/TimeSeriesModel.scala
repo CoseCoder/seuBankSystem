@@ -261,7 +261,7 @@ class TimeSeriesModel {
       //编写sql语句
       sqlCommand="select * from dateDataDf"
       // 调用DataFrameWriter将数据写入mysql（表可以不存在）
-      sqlContext.sql(sqlCommand).write.mode(SaveMode.Overwrite).jdbc("jdbc:mysql://60.205.171.171:3306/bank",outputTableName,prop)
+      sqlContext.sql(sqlCommand).write.mode(SaveMode.Overwrite).jdbc("jdbc:mysql://60.205.171.171:3306/group7",outputTableName,prop)
 
     }
 }

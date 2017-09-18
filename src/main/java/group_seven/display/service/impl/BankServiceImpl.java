@@ -16,9 +16,9 @@ public class BankServiceImpl implements BankService{
 	private TradeTypeMapper tradeTypeMapper;
 
 	@Override
-	public List<TradeType> findTradeTypeList(String fromDate, String toDate) {
+	public List<TradeType> findTradeTypeList() {
 		// TODO Auto-generated method stub
-		return tradeTypeMapper.findTradeTypeList(fromDate, toDate);
+		return tradeTypeMapper.findTradeTypeList();
 	}
 
 	@Autowired
@@ -40,8 +40,8 @@ public class BankServiceImpl implements BankService{
 	@Autowired
 	private PersonalConsumptionMapper personalConsumptionMapper;
     @Override
-	public List<PersonalConsumption> getPersonalConsumptionList(String cardNumber) {
-		return personalConsumptionMapper.getPersonalConsumptionList(cardNumber);
+	public List<PersonalConsumption> getPersonalConsumptionList() {
+		return personalConsumptionMapper.getPersonalConsumptionList();
 	}
 
 	@Autowired

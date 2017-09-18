@@ -11,7 +11,7 @@
     </sql>
 
     <select id="getPersonalConsumptionList" resultMap="BaseResultMap">
-        select Purpose,sum(Money) as Money from b_bankbill group by Purpose
+        select Purpose,sum(Money) as Money from b_bankbill where Purpose != '交易' and BillType=0 group by Purpose
         <!--select Purpose,Money from b_bankbill where Account=#{0}-->
     </select>
 

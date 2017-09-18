@@ -5,8 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a555729-c912-4902-8bcb-8d35061417a6" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/configtest/HadoopApi.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/configtest/HdfsTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/configtest/HiveApi.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/configtest/HiveData.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/configtest/HiveUDF.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/report/chart.html" afterPath="$PROJECT_DIR$/src/main/webapp/report/chart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/conf/dev/config/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/conf/dev/config/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/display/controller/BankController.java" afterPath="$PROJECT_DIR$/src/main/java/group_seven/display/controller/BankController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/display/mapper/PersonalConsumptionMapper.java" afterPath="$PROJECT_DIR$/src/main/java/group_seven/display/mapper/PersonalConsumptionMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/display/mapper/TradeTypeMapper.java" afterPath="$PROJECT_DIR$/src/main/java/group_seven/display/mapper/TradeTypeMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/display/service/BankService.java" afterPath="$PROJECT_DIR$/src/main/java/group_seven/display/service/BankService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/display/service/impl/BankServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/group_seven/display/service/impl/BankServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/ClassifyUsers.scala" afterPath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/ClassifyUsers.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/LogisticRegression.scala" afterPath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/LogisticRegression.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/Predict.scala" afterPath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/Predict.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeries.scala" afterPath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeries.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeriesModel.scala" afterPath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeriesModel.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/data_b_bill.scala" afterPath="$PROJECT_DIR$/src/main/java/group_seven/testdemo/data_b_bill.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sqlMapperXml/PersonalConsumptionMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/sqlMapperXml/PersonalConsumptionMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sqlMapperXml/TradeTypeMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/sqlMapperXml/TradeTypeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/report/static/js/report.js" afterPath="$PROJECT_DIR$/src/main/webapp/report/static/js/report.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,33 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Predict.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/Predict.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-              <folding>
-                <element signature="e#30#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chart.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/report/chart.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="351" column="55" lean-forward="false" selection-start-line="351" selection-start-column="55" selection-end-line="351" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11097">
-              <caret line="411" column="17" lean-forward="false" selection-start-line="411" selection-start-column="17" selection-end-line="411" selection-end-column="17" />
+            <state relative-caret-position="270">
+              <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -110,8 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/group_seven/display/mapper/CityUserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/sqlMapperXml/CityUserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/display/model/CityUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/display/model/TradeType.java" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/display/mapper/BillInfoMapper.java" />
@@ -122,9 +118,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/sqlMapperXml/ProvinceIDToNameMapper.xml.xhtml" />
         <option value="$PROJECT_DIR$/src/main/resources/sqlMapperXml/ProvinceIDToNameMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/display/model/PersonalConsumption.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/sqlMapperXml/PersonalConsumptionMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/sqlMapperXml/BillInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/group_seven/display/mapper/PersonalConsumptionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/mr/CarScoreMR.java" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/HiveData.java" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/configtest/HadoopApi.java" />
@@ -139,28 +133,32 @@
         <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/configtest/HiveData.java" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/HoltWinters.scala" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/LoadDay_02_Data.scala" />
-        <option value="$PROJECT_DIR$/src/main/java/group_seven/display/controller/BankController.java" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/display/mapper/scriptFile.scala" />
-        <option value="$PROJECT_DIR$/src/main/java/group_seven/display/service/BankService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeries.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/sqlMapperXml/CreditCityMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/sqlMapperXml/CreditOneMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/sqlMapperXml/CreditAllMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/group_seven/display/service/impl/BankServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/report/static/js/report.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/report/static/js/report2.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/report/chart2.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/report/chart3.html" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/LogisticRegression.scala" />
-        <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/data_b_bill.scala" />
-        <option value="$PROJECT_DIR$/src/main/conf/dev/config/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/configtest/HiveApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/LoadToHive.scala" />
-        <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/ClassifyUsers.scala" />
-        <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeriesModel.scala" />
-        <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/Predict.scala" />
         <option value="$PROJECT_DIR$/src/main/webapp/report/chart.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/sqlMapperXml/TradeTypeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/group_seven/display/service/BankService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/group_seven/display/service/impl/BankServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/group_seven/display/mapper/TradeTypeMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/group_seven/display/mapper/PersonalConsumptionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/group_seven/display/controller/BankController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/report/static/js/report.js" />
+        <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeries.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/LogisticRegression.scala" />
+        <option value="$PROJECT_DIR$/src/main/resources/sqlMapperXml/PersonalConsumptionMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/conf/dev/config/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/ClassifyUsers.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/data_b_bill.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/Predict.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeriesModel.scala" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -223,17 +221,6 @@
             <path>
               <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
               <item name="east-south" type="462c0819:PsiDirectoryNode" />
-              <item name="spark-warehouse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
-              <item name="east-south" type="462c0819:PsiDirectoryNode" />
-              <item name="spark-warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="bank.db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
-              <item name="east-south" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -241,69 +228,6 @@
               <item name="east-south" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
-              <item name="east-south" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
-              <item name="east-south" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-              <item name="dev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
-              <item name="east-south" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-              <item name="dev" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
-              <item name="east-south" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
-              <item name="east-south" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="group_seven" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
-              <item name="east-south" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="group_seven" type="462c0819:PsiDirectoryNode" />
-              <item name="testdemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
-              <item name="east-south" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
-              <item name="east-south" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
@@ -326,11 +250,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="east-south" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="east-south" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -670,35 +601,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.0.0/spark-core_2.11-2.0.0.jar!/org/apache/spark/rdd/PairRDDFunctions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="36" column="6" lean-forward="false" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="1957" column="18" lean-forward="false" selection-start-line="1957" selection-start-column="18" selection-end-line="1957" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/scriptFile.scala" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/bank_detail_train.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/bill_detail_train.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="-16848">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/data/libsvm_data.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/data/libsvm_data.txt/part-00000" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/data/sample_libsvm_data.txt" />
@@ -795,20 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/display/controller/BankController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3348">
-          <caret line="136" column="31" lean-forward="false" selection-start-line="136" selection-start-column="31" selection-end-line="136" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/HoltWinters.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="75" column="51" lean-forward="false" selection-start-line="75" selection-start-column="51" selection-end-line="75" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.11.0/scala-library-2.11.0.jar!/scala/package.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -844,54 +732,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/display/service/impl/BankServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="61" column="14" lean-forward="true" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1654#1655#0" expanded="false" />
-            <element signature="e#1709#1710#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/report/chart3.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/report/static/js/report2.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/report/static/js/report.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/report/chart2.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/display/service/BankService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/LogisticRegression.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="41" column="70" lean-forward="true" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
-          <folding>
-            <element signature="e#31#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeries.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2855">
-          <caret line="26" column="71" lean-forward="false" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/metastore_db/README_DO_NOT_TOUCH_FILES.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -932,54 +775,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/ClassifyUsers.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="64" column="41" lean-forward="false" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
-          <folding>
-            <element signature="e#30#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/data_b_bill.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="71" column="51" lean-forward="false" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeriesModel.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/display/service/BankService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="263" column="62" lean-forward="false" selection-start-line="263" selection-start-column="62" selection-end-line="263" selection-end-column="62" />
+        <state relative-caret-position="135">
+          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/LoadToHive.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/display/mapper/TradeTypeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/Predict.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/display/mapper/PersonalConsumptionMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding>
-            <element signature="e#30#57#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="7" column="57" lean-forward="false" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/conf/dev/config/jdbc.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/display/service/impl/BankServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        <state relative-caret-position="262">
+          <caret line="43" column="68" lean-forward="false" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/display/controller/BankController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="83" column="80" lean-forward="false" selection-start-line="83" selection-start-column="80" selection-end-line="83" selection-end-column="80" />
           <folding />
         </state>
       </provider>
@@ -992,10 +831,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/HoltWinters.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1809">
+          <caret line="75" column="51" lean-forward="false" selection-start-line="75" selection-start-column="51" selection-end-line="75" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sqlMapperXml/TradeTypeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeries.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sqlMapperXml/PersonalConsumptionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="79" lean-forward="false" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/ClassifyUsers.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="21" column="69" lean-forward="false" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
+          <folding>
+            <element signature="e#30#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/LoadToHive.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1148">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#30#70#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/LogisticRegression.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1067">
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <element signature="e#30#102#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/TimeSeriesModel.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="263" column="109" lean-forward="false" selection-start-line="263" selection-start-column="109" selection-end-line="263" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/Predict.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="75" column="58" lean-forward="false" selection-start-line="75" selection-start-column="58" selection-end-line="75" selection-end-column="58" />
+          <folding>
+            <element signature="e#30#57#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/group_seven/testdemo/data_b_bill.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="71" column="58" lean-forward="false" selection-start-line="71" selection-start-column="58" selection-end-line="71" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/conf/dev/config/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="56" lean-forward="false" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/report/static/js/report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1161">
+          <caret line="55" column="42" lean-forward="false" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11097">
-          <caret line="411" column="17" lean-forward="false" selection-start-line="411" selection-start-column="17" selection-end-line="411" selection-end-column="17" />
+        <state relative-caret-position="270">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding />
         </state>
       </provider>

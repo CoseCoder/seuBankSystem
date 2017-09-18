@@ -73,7 +73,7 @@ object Predict {
     prop.put("transformedBitIsBoolean", "true")
     prop.put("useSSL", "false")
 
-    dfWriter.jdbc("jdbc:mysql://60.205.171.171:3306/bank", "test_data", prop)
+    dfWriter.jdbc("jdbc:mysql://60.205.171.171:3306/group7", "test_data", prop)
 
     spark.stop()
   }

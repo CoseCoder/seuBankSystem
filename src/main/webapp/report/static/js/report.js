@@ -20,7 +20,6 @@ function tradetypeinfo() {
 	$.ajax({
 		type:"GET",
 		url:"/report/tradetypeinfo",
-		data:"fromDate=2016-01&toDate=2016-12",
 		dataType:"json",
 		success:function(d){
 			showTradeTypeInfo(d.alipay,d.wechatpay,d.tenpay)
@@ -55,7 +54,6 @@ function consumptiontypeinfo(){
 	$.ajax({
 		type:"GET",
 		url:"/report/consumptiontypeinfo",
-		data:"cardNumber=6542661784689656633",
 		dataType:"json",
 		success:function(d){
 			showConsumptionTypeInfo(d)

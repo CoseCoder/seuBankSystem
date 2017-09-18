@@ -17,8 +17,13 @@ object TimeSeries {
     val spark = SparkSession.builder().appName("TimeSeries").master("local").enableHiveSupport().getOrCreate()
     val sc = spark.sparkContext
 
+    //预测的月份数
     val predictedN = 6
+
+    //输出到数据库的表名
     val outputTableName = "time_series"
+
+    //数据表结构
     val columnsName=List("time","data")
 
     /**

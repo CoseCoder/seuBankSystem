@@ -5,5 +5,5 @@ import java.util.List;
 import group_seven.display.model.TradeType;
 
 public interface TradeTypeMapper {
-	List<TradeType> findTradeTypeList(String fromDate,String toDate);
+	List<TradeType> findTradeTypeList();
 }
