@@ -405,18 +405,18 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <charset>${project.build.sourceEncoding}</charset>
-                    <uriEncoding>${project.build.sourceEncoding}</uriEncoding>
-                    <server>tomcat.server</server>
-                    <path>/</path>
-                    <port>8086</port>
-                </configuration>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.apache.tomcat.maven</groupId>-->
+                <!--<artifactId>tomcat7-maven-plugin</artifactId>-->
+                <!--<version>2.2</version>-->
+                <!--<configuration>-->
+                    <!--<charset>${project.build.sourceEncoding}</charset>-->
+                    <!--<uriEncoding>${project.build.sourceEncoding}</uriEncoding>-->
+                    <!--<server>tomcat.server</server>-->
+                    <!--<path>/</path>-->
+                    <!--<port>8086</port>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
 
             <!--jetty 插件，mvn jetty:run -->
             <plugin>

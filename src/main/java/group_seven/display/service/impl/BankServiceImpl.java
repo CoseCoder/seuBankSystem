@@ -64,4 +64,25 @@ public class BankServiceImpl implements BankService{
 	public List<CreditOne> getCreditOneList(String account) {
 		return creditOneMapper.getCreditOneList(account);
 	}
+
+	@Autowired
+	private TimeSeriesMapper timeSeriesMapper;
+	@Override
+	public List<TimeSeries> getTimeSeriesList(){
+		return timeSeriesMapper.getTimeSeriesList();
+	}
+
+	@Autowired
+	private PersonasMapper personasMapper;
+	@Override
+	public List<Personas> getPersonasList(String purpose){
+		return personasMapper.getPersonasList(purpose);
+	}
+
+	@Autowired
+	private TestDataMapper testDataMapper;
+	@Override
+	public List<TestData> getTestDataList(String label) {
+		return testDataMapper.getTestDataList(label);
+	}
 }

@@ -149,4 +149,78 @@ public class BankController {
         }
         return result;
     }
+
+    @RequestMapping(value = "/company", method = RequestMethod.GET)
+    @ResponseBody
+    public Object timeSeries(){
+        List<TimeSeries> list = bankService.getTimeSeriesList();
+        JSONArray result = new JSONArray();
+        for(TimeSeries item : list){
+            JSONObject object = new JSONObject();
+            object.put("date",item.getTime());
+            object.put("value",item.getData());
+            result.add(object);
+        }
+        return result;
+    }
+
+    @RequestMapping(value = "/personas", method = RequestMethod.GET)
+    @ResponseBody
+    public Object personas(String purpose){
+            List<Personas> list = bankService.getPersonasList(purpose);
+        JSONArray result = new JSONArray();
+        for(Personas item : list){
+            JSONObject object = new JSONObject();
+            object.put("account",item.getAccount());
+//            object.put("frequence",item.getFrequence());
+            result.add(object);
+        }
+        return result;
+    }
+    @RequestMapping(value = "/testdata", method = RequestMethod.GET)
+    @ResponseBody
+    public Object testData() {
+        List<TestData> list = bankService.getTestDataList("0");
+        List<TestData> list2 = bankService.getTestDataList("1");
+        JSONArray result = new JSONArray();
+        for(TestData item : list){
+            JSONObject obj = new JSONObject();
+            obj.put("id",item.getId());
+            obj.put("label", item.getLabel());
+            obj.put("gender", item.getGender());
+            obj.put("job", item.getJob());
+            obj.put("education", item.getEducation());
+            obj.put("marriage", item.getMarriage());
+            obj.put("residence",item.getResidence());
+            obj.put("hits", item.getHits());
+            obj.put("avg_last_bill_amount", item.getAvg_last_bill_amount());
+            obj.put("avg_repayment_amount", item.getAvg_repayment_amount());
+            obj.put("avg_credit_limit", item.getAvg_credit_limit());
+            obj.put("avg_balance", item.getAvg_balance());
+            obj.put("avg_min_repay_amount", item.getAvg_min_repay_amount());
+            obj.put("bill_amount", item.getBill_amount());
+            obj.put("repay_status", item.getRepay_status());
+            result.add(obj);
+        }
+        for(TestData item : list2){
+            JSONObject obj = new JSONObject();
+            obj.put("id",item.getId());
+            obj.put("label", item.getLabel());
+            obj.put("gender", item.getGender());
+            obj.put("job", item.getJob());
+            obj.put("education", item.getEducation());
+            obj.put("marriage", item.getMarriage());
+            obj.put("residence",item.getResidence());
+            obj.put("hits", item.getHits());
+            obj.put("avg_last_bill_amount", item.getAvg_last_bill_amount());
+            obj.put("avg_repayment_amount", item.getAvg_repayment_amount());
+            obj.put("avg_credit_limit", item.getAvg_credit_limit());
+            obj.put("avg_balance", item.getAvg_balance());
+            obj.put("avg_min_repay_amount", item.getAvg_min_repay_amount());
+            obj.put("bill_amount", item.getBill_amount());
+            obj.put("repay_status", item.getRepay_status());
+            result.add(obj);
+        }
+        return result;
+    }
 }

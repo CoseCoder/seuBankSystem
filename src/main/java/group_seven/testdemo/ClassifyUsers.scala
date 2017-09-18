@@ -2,8 +2,6 @@ package group_seven.testdemo
 
 import java.util.Properties
 
-import org.apache.spark.api.java.function.VoidFunction
-import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.{SQLContext, SparkSession}
 
 object ClassifyUsers {
@@ -16,12 +14,12 @@ object ClassifyUsers {
     val sqlContext = new SQLContext(sc)
     val prop = new Properties()
     prop.put("user", "root")
-    prop.put("password", "root")
+    prop.put("password", "123456")
     prop.put("transformedBitIsBoolean", "true")
     prop.put("useSSL", "false")
 
     //从MySQL读取数据
-    val df = spark.read.jdbc("jdbc:mysql://localhost:3306/bank", "new_bankbill", prop)
+    val df = spark.read.jdbc("jdbc:mysql://60.205.171.171:3306/bank", "new_bankbill", prop)
     //        df.show()
 
     //处理数据，过滤数据
@@ -64,7 +62,7 @@ object ClassifyUsers {
       .toDF("Account", "Purpose", "Frequence")
 
     //将数据写入MySQL
-    val dfWriter = ndf.write.mode("overwrite")
-    dfWriter.jdbc("jdbc:mysql://localhost:3306/bank", "personas", prop)
+    val dfWriter = ndf.write.mode("append")
+    dfWriter.jdbc("jdbc:mysql://60.205.171.171:3306/bank", "personas", prop)
   }
 }

@@ -5,51 +5,564 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>银行大数据分析平台</title>
     <!-- 引入 echarts.js -->
+
     <script src="static/js/echarts.min.js"></script>
     <script src="static/js/jquery-3.2.1.min.js"></script>
     <script src="static/js/report.js"></script>
     <script src="static/js/china.js"></script>
     <script src="js/bootstrap.js"></script>
+
+
+
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/buttons.css" type="text/css" />
+
+    <!--<style type="text/css">-->
+<!--#html32{-->
+
+<!--float:left;-->
+
+<!--width:20px;-->
+
+<!--height:20px;-->
+
+
+
+<!--background:#FFFFFF-->
+
+<!--}-->
+<!--</style>-->
+
+
+    <script>
+     window.onload=function(){
+  if (location.href.indexOf("?xyz=")<0)
+ {
+ location.href=location.href+"?xyz="+Math.random();
+ }
+
+}
+
+function refresh(){
+
+    url = location.href;
+
+    console.log(url);
+    var once = url.split("#");
+
+    if (once[1] != 1) {
+
+        url += "#1";
+
+        self.location.replace(url);
+
+        window.location.reload();
+
+    }
+}
+
+setTimeout('refresh()', 1000);
+
+
+
+$(document).ready(function(){
+$('#html22').show("slow");
+$('#html31').show("slow");
+$('#html31').hide("slow");
+$('#html22').hide("slow");
+
+document.getElementById("header").innerHTML="统计报表";
+
+});
+
+function tb1(){
+    document.getElementById("header").innerHTML="统计报表";
+    $('#html20').hide("slow");
+    $('#html21').hide("slow");
+	$('#html22').hide("slow");
+	$('#html23').hide("slow");
+	$('#html1').show("slow");
+	$('#html2').show("slow");
+	$('#html31').hide("slow");
+      $('#html32').hide("slow");
+      $('#html40').hide("slow");
+      $('#html42').hide("slow");
+$('#html43').hide("slow");
+$('#html44').hide("slow");
+$('#html45').hide("slow");
+$('#html41').hide("slow");
+
+
+}
+
+function tb2(){
+
+document.getElementById("header").innerHTML="用户风险管理";
+
+	  $('#html1').hide("slow");
+	  $('#html2').hide("slow");
+	  $('#html20').show("slow");
+	  $('#html21').show("slow");
+	  $('#html22').hide("fast");
+	  $('#html23').hide("slow");
+	  $('#html31').hide("slow");
+      $('#html32').hide("slow");
+      $('#html40').hide("slow");
+            $('#html42').hide("slow");
+$('#html43').hide("slow");
+$('#html44').hide("slow");
+$('#html45').hide("slow");
+$('#html41').hide("slow");
+
+
+	}
+function tb21(){
+    $('#html22').hide("slow");
+$('#html23').hide("slow");
+	$('#html21').show("slow");
+
+
+
+}
+
+function tb22(){
+
+$('#html23').hide("slow");
+	  $('#html21').hide("slow");
+	  $('#html22').show("slow");
+
+	}
+
+function tb23(){
+
+
+	  $('#html21').hide("slow");
+	  $('#html22').hide("slow");
+	  $('#html23').show("slow");
+
+	}
+
+
+function tb3(){
+
+document.getElementById("header").innerHTML="公司风险管理";
+    $('#html20').hide("slow");
+    $('#html21').hide("slow");
+	$('#html22').hide("slow");
+	$('#html23').hide("slow");
+	$('#html1').hide("slow");
+	$('#html2').hide("slow");
+	$('#html40').hide("slow");
+
+      $('#html31').show("slow");
+      $('#html32').show("slow");
+            $('#html42').hide("slow");
+$('#html43').hide("slow");
+$('#html44').hide("slow");
+$('#html45').hide("slow");
+$('#html41').hide("slow");
+    }
+
+function tb4(){
+document.getElementById("header").innerHTML="用户画像";
+$('#html20').hide("slow");
+    $('#html21').hide("slow");
+	$('#html22').hide("slow");
+	$('#html23').hide("slow");
+	$('#html1').hide("slow");
+	$('#html2').hide("slow");
+
+      $('#html31').hide("slow");
+      $('#html32').hide("slow");
+$('#html40').show("slow");
+$('#html41').show("slow");
+
+
+}
+
+function tb41(){
+$('#html42').hide("slow");
+$('#html43').hide("slow");
+$('#html44').hide("slow");
+$('#html45').hide("slow");
+$('#html41').show("slow");
+}
+
+function tb42(){
+$('#html42').show("slow");
+$('#html43').hide("slow");
+$('#html44').hide("slow");
+$('#html45').hide("slow");
+$('#html41').hide("slow");
+}
+function tb43(){
+$('#html42').hide("slow");
+$('#html43').show("slow");
+$('#html44').hide("slow");
+$('#html45').hide("slow");
+$('#html41').hide("slow");
+}
+function tb44(){
+$('#html42').hide("slow");
+$('#html43').hide("slow");
+$('#html44').show("slow");
+$('#html45').hide("slow");
+$('#html41').hide("slow");
+}
+function tb45(){
+$('#html42').hide("slow");
+$('#html43').hide("slow");
+$('#html44').hide("slow");
+$('#html45').show("slow");
+$('#html41').hide("slow");
+}
+
+
+
+</script>
+
+
 </head>
+
+
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a href="#" class="navbar-brand">银行大数据分析平台</a>
-            </div>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-offset-2">
-                <h1 class="page-header">统计报表</h1>
-            </div>
-            <div class="col-sm-2">
-                <nav>
-                    <ul class="nav nav-pills nav-stacked">
-                        <li class="active"><a href="#">统计报表</a></li>
-                        <li><a href="#">风险管理</a></li>
-                        <li><a href="#">用户画像</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-sm-5">
-                <h3>用户交易工具统计</h3>
-                <div id="tradeTypeChart" style="min-height: 400px"></div>
-                <br>
-                <h3>账单分布统计</h3>
-                <div id="billDistributionChart" style="min-height: 400px"></div>
-            </div>
-            <div class="col-sm-5">
-                <h3>用户主要城市分布</h3>
-                <div id="userDistributionChart" style="min-height: 400px"></div>
-                <br>
-                <h3>用户消费类型统计</h3>
-                <div id="consumptionTypeChart" style="min-height: 400px"></div>
-            </div>            
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">银行大数据分析平台</a>
         </div>
     </div>
+</nav>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-2">
+            <h1 id="header" class="page-header" style="color:white;"></h1>
+        </div>
+
+
+
+        <div class="col-sm-2">
+            <nav>
+
+
+                <ul class="nav nav-pills nav-stacked">
+                    <div class="btn-group-vertical">
+                    <button id="btn1" class="btn btn-default button button-primary button-small" style="width: 130px; height: 50px;font-size:15px; padding-left:5px;padding-right:5px;" onclick="tb1();" >  统计报表 </button>
+                    <button id="btn2" class="btn btn-default button button-primary button-small" style="width: 130px; height: 50px;font-size:15px;padding-left:5px;padding-right:5px;" onclick="tb2();" >用户风险管理</button>
+                    <button id="btn3" class="btn btn-default button button-primary button-small" style="width: 130px; height: 50px;font-size:15px;padding-left:5px;padding-right:5px;" onclick="tb3();" >公司风险管理</button>
+                    <button id="btn4" class="btn btn-default button button-primary button-small" style="width: 130px; height: 50px;font-size:15px;padding-left:5px;padding-right:5px;" onclick="tb4();" >  用户画像 </button>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+
+
+
+
+        <div id="html1" class="col-sm-5" >
+
+
+
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">用户交易工具统计</h3>
+                </div>
+
+                <div id="tradeTypeChart" class="panel-body" style="min-height: 400px"></div>
+                <br>
+                <div class="panel-heading">
+                    <h3 class="panel-title">账单分布统计</h3></div>
+
+
+                <div id="billDistributionChart" class="panel-body" style="min-height: 400px"></div>
+            </div>
+        </div>
+
+        <div id="html2" class="col-sm-5" >
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">用户主要城市分布</h3>
+                </div>
+
+                <div id="userDistributionChart" class="panel-body" style="min-height: 400px"></div>
+                <br>
+                <div class="panel-heading">
+                    <h3 class="panel-title">用户消费类型统计</h3></div>
+
+
+                <div id="consumptionTypeChart" class="panel-body" style="min-height: 400px"></div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- style="display:none;" -->
+        <div id="html20" class="col-sm-10"  style="display:none;">
+
+
+            <div class="button-group">
+                <button type="button" class="button button-primary button-rounded button-small" style="width: 180px; height: 50px;font-size:15px;" onclick="tb21();">交易信息</button>
+                <button type="button" class="button button-primary button-rounded button-small" style="width: 180px; height: 50px;font-size:15px;" onclick="tb22();">交易异常城市分布</button>
+                <button type="button" class="button button-primary button-rounded button-small" style="width: 180px; height: 50px;font-size:15px;" onclick="tb23();">部分用户逾期预测</button>
+            </div>
+
+
+        </div>
+
+        <div id="html21" class="col-sm-10 panel panel-primary" style="display:none;">
+
+
+                <div id="bank" class="panel-body" style="min-height: 400px">
+                    <table id="banktable" class="table table-bordered">
+                        <thead>
+                        <tr>
+
+                            <td>流水号</td><!-- BillNumber -->
+                            <td>账号</td><!-- Account -->
+                            <td>消费金额</td><!--  Money-->
+                            <td>消费时间</td><!-- BillDate -->
+                            <td>支付工具</td><!-- BillExInfo -->
+                            <td>市名</td><!-- BillSite -->
+                            <td>异常类型</td><!-- ExReason -->
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+                </div>
+            </div>
+        <div id="html22"  class="col-sm-5 panel panel-primary" >
+
+
+            <div id="creditcityChart"  class="panel-body" style="min-height:400px "></div>
+
+        </div>
+
+        <div id="html23" class="col-sm-10 panel panel-primary" style="display:none;">
+
+
+            <div id="test" class="panel-body" style="min-height: 400px">
+                <table id="testdatatable" class="table table-bordered">
+                    <thead>
+                    <tr>
+
+                        <td>是否逾期</td><!-- BillNumber -->
+                        <td>姓名</td><!-- Account -->
+                        <td>性别</td><!--  Money-->
+                        <td>工作</td><!-- BillDate -->
+                        <td>教育程度</td><!-- BillExInfo -->
+                        <td>婚姻状态</td><!-- BillSite -->
+                        <td>住址</td><!-- ExReason -->
+                        <td>浏览次数</td>
+                        <td>平均上期账单金额</td>
+                        <td>平均偿还金额</td>
+                        <td>平均信用卡额度</td>
+                        <td>平均余额</td>
+                        <td>平均最低还款金额</td>
+                        <td>本期账单金额</td>
+                        <td>还款状态</td>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </div>
+        </div>
+
+
+
+        <div id="html31" class="col-sm-10 panel panel-primary">
+            <div id="companyChart" class="panel-body" style="min-height:400px"></div>
+        </div>
+
+
+
+
+        <!--<div id="html300" class="col-sm-2" style="display:none;">-->
+
+        <!--</div>-->
+
+            <div id="html32" class="col-sm-12 panel panel-primary" style="display:none;">
+
+
+            <div class="panel-heading">
+                <h3 class="panel-title">XX公司收益报表</h3>
+            </div>
+            <div id="companytb" class="panel-body" style="min-height: 200px">
+                <table id="companytable" class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <td></td>
+                        <td>1月份</td>
+                        <td>2月份</td>
+                        <td>3月份</td>
+                        <td>4月份</td>
+                        <td>5月份</td>
+                        <td>6月份</td>
+                        <td>7月份</td>
+                        <td>8月份</td>
+                        <td>9月份</td>
+                        <td>10月份</td>
+                        <td>11月份</td>
+                        <td>12月份</td>
+                    </tr>
+                    <!--<tr id="2010"><td>2010年（实际收益）</td></tr>-->
+                    <!--<tr id="2011"><td>2011年（实际收益）</td></tr>-->
+                    <!--<tr id="2012"><td>2012年（预计收益）</td></tr>-->
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            </div>
+
+
+
+        <div id="html40" class="col-sm-10"  style="display:none;">
+            <div class="button-group">
+                <button   class="button button-primary  button-small" style="width: 70px; height: 50px;font-size:15px; padding-left:5px;padding-right:5px" onclick="tb41();">购物</button>
+                <button   class="button button-primary  button-small" style="width: 70px; height: 50px;font-size:15px; padding-left:5px;padding-right:5px" onclick="tb42();">QQ充值</button>
+                <button   class="button button-primary  button-small" style="width: 70px; height: 50px;font-size:15px; padding-left:5px;padding-right:5px" onclick="tb43();">水电费</button>
+                <button   class="button button-primary  button-small" style="width: 70px; height: 50px;font-size:15px; padding-left:5px;padding-right:5px" onclick="tb44();">外卖</button>
+                <button   class="button button-primary  button-small" style="width: 70px; height: 50px;font-size:15px; padding-left:5px;padding-right:5px" onclick="tb45();">游戏</button>
+            </div>
+
+
+        </div>
+
+
+        <div id="html41" class="col-sm-10 panel panel-primary" style="display:none;">
+            <div class="panel-heading">
+                <h3 class="panel-title">高频用户</h3>
+            </div>
+
+
+            <div  class="panel-body" style="min-height: 400px">
+                <table id="shoptable" class="table table-bordered">
+                    <thead>
+                    <tr>
+
+
+                        <td>账号</td> <!-- 购物Account -->
+
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </div>
+        </div>
+
+
+        <div id="html42" class="col-sm-10 panel panel-primary" style="display:none;">
+            <div class="panel-heading">
+                <h3 class="panel-title">高频用户</h3>
+            </div>
+        <div  class="panel-body" style="min-height: 400px">
+            <table id="qqtable" class="table table-bordered">
+                <thead>
+                <tr>
+
+
+                    <td>账号</td> <!-- QQ充值Account -->
+
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+        <div id="html43" class="col-sm-10 panel panel-primary" style="display:none;">
+            <div class="panel-heading">
+                <h3 class="panel-title">高频用户</h3>
+            </div>
+    <div  class="panel-body" style="min-height: 400px">
+        <table id="wetable" class="table table-bordered">
+            <thead>
+            <tr>
+
+
+                <td>账号</td> <!-- 水电费Account -->
+
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+</div>
+
+
+        <div id="html44" class="col-sm-10 panel panel-primary" style="display:none;">
+            <div class="panel-heading">
+                <h3 class="panel-title">高频用户</h3>
+            </div>
+<div  class="panel-body" style="min-height: 400px">
+    <table id="foodtable" class="table table-bordered">
+        <thead>
+        <tr>
+
+
+            <td>账号</td> <!-- 外卖Account -->
+
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</div>
+</div>
+
+
+        <div id="html45" class="col-sm-10 panel panel-primary" style="display:none;">
+            <div class="panel-heading">
+                <h3 class="panel-title">高频用户</h3>
+            </div>
+<div  class="panel-body" style="min-height: 400px">
+    <table id="gametable" class="table table-bordered">
+        <thead>
+        <tr>
+
+
+            <td>账号</td> <!-- 游戏Account -->
+
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
 
 
 </body>

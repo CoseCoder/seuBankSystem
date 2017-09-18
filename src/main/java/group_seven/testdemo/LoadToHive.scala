@@ -47,14 +47,14 @@ object LoadToHive {
     hiveContext.sql("use bank")
 
     //创建数据表user_info并插入数据
-//    hiveContext.sql("truncate table user_info")
+    //    hiveContext.sql("truncate table user_info")
     var df1 = user_info.toDF("id", "gender", "job",
       "education", "marriage", "residence").registerTempTable("user_info")
     hiveContext.sql("create table IF NOT EXISTS user_info as " +
       "select * from user_info")
-//    hiveContext.sql("select * from user_info").show()
+    //    hiveContext.sql("select * from user_info").show()
 
-    hiveContext.sql("drop table overdue")
+    //    hiveContext.sql("drop table overdue")
     //创建数据表overdue并插入数据
     var df2 = overdue.toDF("id", "label").registerTempTable("overdue")
     hiveContext.sql("create table IF NOT EXISTS overdue as " +

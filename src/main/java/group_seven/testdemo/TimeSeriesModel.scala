@@ -252,7 +252,7 @@ class TimeSeriesModel {
       //设置用户名和密码
       val prop = new Properties()
       prop.setProperty("user","root")
-      prop.setProperty("password","root")
+      prop.setProperty("password","123456")
       prop.setProperty("transformedBitIsBoolean", "true")
       prop.setProperty("useSSL", "false")
       var sqlCommand=""
@@ -261,7 +261,7 @@ class TimeSeriesModel {
       //编写sql语句
       sqlCommand="select * from dateDataDf"
       // 调用DataFrameWriter将数据写入mysql（表可以不存在）
-      sqlContext.sql(sqlCommand).write.mode(SaveMode.Overwrite).jdbc("jdbc:mysql://localhost:3306/bank",outputTableName,prop)
+      sqlContext.sql(sqlCommand).write.mode(SaveMode.Overwrite).jdbc("jdbc:mysql://60.205.171.171:3306/bank",outputTableName,prop)
 
     }
 }

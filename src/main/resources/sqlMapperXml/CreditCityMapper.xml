@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="group_seven.display.mapper.CityUserMapper">
-    <resultMap id="BaseResultMap" type="group_seven.display.model.CityUser">
+<mapper namespace="group_seven.display.mapper.CreditCityMapper">
+    <resultMap id="BaseResultMap" type="group_seven.display.model.CreditCity">
         <result column="CityName" property="City" jdbcType="VARCHAR"/>
         <result column="Number" property="amount" jdbcType="NUMERIC"/>
         <result column="xdata" property="xData" jdbcType="VARCHAR"/>
@@ -12,10 +12,10 @@
         CityName,Number,xdata,ydata
     </sql>
 
-    <select id="getCityUserList" resultMap="BaseResultMap">
+    <select id="getCreditCityList" resultMap="BaseResultMap">
         SELECT
         MAX(b_banksiteinfo.BankSiteName) as CityName,
-        SUM(exceptionaccount.Money) as Number,
+        COUNT(exceptionaccount.Money) as Number,
         MAX(b_cityinfo.ydata) as yData,
         MAX(b_cityinfo.xdata) as xData
         FROM b_banksiteinfo inner join exceptionaccount inner join b_cityinfo

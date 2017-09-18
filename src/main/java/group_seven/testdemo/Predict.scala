@@ -1,15 +1,15 @@
 package group_seven.testdemo
 
-
 import java.util.Properties
 
-import org.apache.spark.mllib.linalg.Vectors
-import org.apache.spark.mllib.classification.{LogisticRegressionModel, LogisticRegressionWithLBFGS}
+import org.apache.spark.mllib.classification.LogisticRegressionModel
 import org.apache.spark.mllib.evaluation.MulticlassMetrics
+import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.regression.LabeledPoint
 import org.apache.spark.sql.SparkSession
 
-object LogisticRegression {
+object Predict {
+
   def main(args: Array[String]): Unit = {
 
     val spark = SparkSession.builder().appName("LogisticRegressionModel").master("local").enableHiveSupport().getOrCreate()
@@ -36,29 +36,45 @@ object LogisticRegression {
       m(9).toString.toDouble, m(10).toString.toDouble, m(11).toString.toDouble,
       m(12).toString.toDouble, m(13).toString.toDouble, m(14).toString.toDouble)))
 
-    val rs0 = rs.filter(_._1 == 1).union(sc.parallelize(rs.filter(_._1 == 0).take(10000)))
 
     //转换成labeledPoint格式
-    var data = rs0.map(m => (LabeledPoint(m._1, Vectors.dense(m._2))))
+    var data = rs.map(m => (LabeledPoint(m._1, Vectors.dense(m._2))))
 
-    // Run training algorithm to build the model
-    val model = new LogisticRegressionWithLBFGS()
-      .setNumClasses(2)
-      .run(data)
+    //Load model
+    val sameModel = LogisticRegressionModel.load(sc,
+      "src/main/resources/data/scalaLogisticRegressionWithLBFGSModel")
 
     // Compute raw scores on the test set.
     val predictionAndLabels = data.filter(_.label == 1).map { case LabeledPoint(label, features) =>
-      val prediction = model.predict(features)
+      val prediction = sameModel.predict(features)
       (prediction, label)
     }
+    //    predictionAndLabels.filter(_._1 == 1) foreach (println)
 
     // Get evaluation metrics.
     val metrics = new MulticlassMetrics(predictionAndLabels)
     val accuracy = metrics.accuracy
     println(s"Accuracy = $accuracy")
 
-    // Save model
-    model.save(sc, "src/main/resources/data/scalaLogisticRegressionWithLBFGSModel")
+
+    //将得到的数据导入MySQL的数据表test_data中
+
+    var df = temp.toDF("prediction", "label", "gender", "job", "education", "marriage",
+      "residence", "hits", "avg_last_bill_amount", "avg_repayment_amount",
+      "avg_credit_limit", "avg_balance", "avg_min_repay_amount", "bill_amount", "repay_status")
+
+    //    df.show()
+
+    val dfWriter = df.write.mode("append")
+
+    val prop = new Properties()
+    prop.put("user", "root")
+    prop.put("password", "123456")
+    prop.put("transformedBitIsBoolean", "true")
+    prop.put("useSSL", "false")
+
+    dfWriter.jdbc("jdbc:mysql://60.205.171.171:3306/bank", "test_data", prop)
+
     spark.stop()
   }
 }

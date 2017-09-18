@@ -11,6 +11,16 @@ html {
 }
 body {
   margin: 0;
+  background-image: linear-gradient(rgb(26, 49, 95) 0%, rgb(26, 49, 95) 10%, rgb(29, 108, 141) 24%, rgb(41, 136, 151) 37%, rgb(39, 45, 100) 77%, rgb(26, 49, 95) 90%, rgb(26, 49, 95) 100%);
+      background-position-x: initial;
+      background-position-y: initial;
+      background-size: initial;
+      background-repeat-x: initial;
+      background-repeat-y: initial;
+      background-attachment: initial;
+      background-origin: initial;
+      background-clip: initial;
+      background-color: initial;
 }
 article,
 aside,
@@ -49,6 +59,10 @@ a:active,
 a:hover {
   outline: 0;
 }
+
+
+
+
 abbr[title] {
   border-bottom: 1px dotted;
 }

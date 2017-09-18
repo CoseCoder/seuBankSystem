@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="group_seven.display.mapper.TestDataMapper">
+	<resultMap id="BaseResultMap" type="group_seven.display.model.TestData">
+		<result column="id" property="id" jdbcType="NUMERIC" />
+		<result column="label" property="label" jdbcType="NUMERIC" />
+		<result column="gender" property="gender" jdbcType="NUMERIC" />
+		<result column="job" property="job" jdbcType="NUMERIC" />
+		<result column="education" property="education" jdbcType="NUMERIC" />
+		<result column="marriage" property="marriage" jdbcType="NUMERIC" />
+		<result column="residence" property="residence" jdbcType="NUMERIC" />
+		<result column="hits" property="hits" jdbcType="NUMERIC" />
+		<result column="avg_last_bill_amount" property="avg_last_bill_amount" jdbcType="NUMERIC" />
+		<result column="avg_repayment_amount" property="avg_repayment_amount" jdbcType="NUMERIC" />
+		<result column="avg_credit_limit" property="avg_credit_limit" jdbcType="NUMERIC" />
+		<result column="avg_balance" property="avg_balance" jdbcType="NUMERIC" />
+		<result column="avg_min_repay_amount" property="avg_min_repay_amount" jdbcType="NUMERIC" />
+		<result column="bill_amount" property="bill_amount" jdbcType="NUMERIC" />
+		<result column="repay_status" property="repay_status" jdbcType="NUMERIC" />
+	</resultMap>
+
+	<!--表名 -->
+<!-- 	<sql id="tableName"> -->
+<!-- 		b_bankbill -->
+<!-- 	</sql> -->
+	
+	<sql id="Base_Column_List">
+	    id,label,gender,job,education,marriage,residence,hits,avg_last_bill_amount,avg_repayment_amount,avg_credit_limit,avg_balance,avg_min_repay_amount,bill_amount,repay_status
+	</sql>
+
+	<select id="getTestDataList" resultMap="BaseResultMap">
+<!-- 		select BillExInfo,count(*) as Number from  -->
+<!-- 		<include refid="tableName" /> -->
+<!-- 		where BillDate between #{0} and #{1} group by BillExInfo -->
+		SELECT * FROM test_data WHERE label=#{0} LIMIT 20
+	</select>
+
+
+</mapper>

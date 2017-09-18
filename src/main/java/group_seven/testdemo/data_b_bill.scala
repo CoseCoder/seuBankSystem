@@ -65,10 +65,10 @@ object data_b_bill {
 
     val prop = new Properties()
     prop.put("user", "root")
-    prop.put("password", "root")
+    prop.put("password", "123456")
     prop.put("transformedBitIsBoolean", "true")
     prop.put("useSSL", "false")
 
-    dfWriter.jdbc("jdbc:mysql://localhost:3306/bank", "exceptionaccount", prop)
+    dfWriter.jdbc("jdbc:mysql://60.205.171.171:3306/bank", "exceptionaccount", prop)
   }
 }

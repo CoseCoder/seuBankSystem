@@ -12,7 +12,7 @@ public class HiveApi {
         Connection con = null;
         try {
             Class.forName(driverName);
-            con = DriverManager.getConnection("jdbc:hive2://localhost:10000/bank", "root", "123456");
+            con = DriverManager.getConnection("jdbc:hive2://hive2://colordata-cluster-001:10000/bank", "root", "123456");
 
             Statement stmt = con.createStatement();
             String data = "select * from car_score";

@@ -18,4 +18,10 @@ public interface BankService {
 	List<CreditCity> getCreditCityList();
 
 	List<CreditOne> getCreditOneList(String account);
+
+	List<TimeSeries> getTimeSeriesList();
+
+	List<Personas> getPersonasList(String purpose);
+
+	List<TestData> getTestDataList(String label);
 }
