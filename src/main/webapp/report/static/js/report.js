@@ -533,7 +533,7 @@ function shoppersonas() {
 	$.ajax({
 		type:"GET",
 		url:"/report/personas",
-		data:"purpose=购物",
+		data:"purpose=shopping",
 		dataType:"json",
 		success:function(d){
 			showshoptable(d)
@@ -564,7 +564,7 @@ function qqpersonas() {
 	$.ajax({
 		type:"GET",
 		url:"/report/personas",
-		data:"purpose=QQ充值",
+		data:"purpose=qq",
 		dataType:"json",
 		success:function(d){
 			showqqtable(d)
@@ -594,7 +594,7 @@ function wepersonas() {
 	$.ajax({
 		type:"GET",
 		url:"/report/personas",
-		data:"purpose=水电费",
+		data:"purpose=we",
 		dataType:"json",
 		success:function(d){
 			showwetable(d)
@@ -624,7 +624,7 @@ function foodpersonas() {
 	$.ajax({
 		type:"GET",
 		url:"/report/personas",
-		data:"purpose=外卖",
+		data:"purpose=food",
 		dataType:"json",
 		success:function(d){
 			showfoodtable(d)
@@ -655,7 +655,7 @@ function gamepersonas() {
 	$.ajax({
 		type:"GET",
 		url:"/report/personas",
-		data:"purpose=游戏",
+		data:"purpose=game",
 		dataType:"json",
 		success:function(d){
 			showgametable(d)

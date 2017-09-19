@@ -20,54 +20,55 @@ import java.util.Map;
 @Controller
 @RequestMapping(value = "/report")
 public class BankController {
-	@Autowired
-	private BankService bankService;
+    @Autowired
+    private BankService bankService;
 
-	@RequestMapping(value = "/tradetypeinfo", method = RequestMethod.GET)
-	@ResponseBody
-	public Object tradeTypeInfo() {
-		List<TradeType> list= bankService.findTradeTypeList();
-		Map<String,Long> result=new HashMap<String,Long>();
-		for (TradeType item:list) {
-			if(item.getTradetype().equals("支付宝"))
-				result.put("alipay",item.getNumber());
-			else if(item.getTradetype().equals("微信"))
-				result.put("wechatpay",item.getNumber());
-			else
-				result.put("tenpay",item.getNumber());
-		}
-		return result;
-	}
-	@RequestMapping(value="/userdistributioninfo",method = RequestMethod.GET)
-	@ResponseBody
-	public Object userDistributionInfo() {
-		List<CityUser> list = bankService.getCityUserList();
-        JSONArray result=new JSONArray();
-		for(CityUser item : list) {
-            JSONArray array=new JSONArray();
-            JSONObject obj=new JSONObject();
-		    array.add(Float.valueOf(item.getyData()));
+    @RequestMapping(value = "/tradetypeinfo", method = RequestMethod.GET)
+    @ResponseBody
+    public Object tradeTypeInfo() {
+        List<TradeType> list = bankService.findTradeTypeList();
+        Map<String, Long> result = new HashMap<String, Long>();
+        for (TradeType item : list) {
+            if (item.getTradetype().equals("支付宝"))
+                result.put("alipay", item.getNumber());
+            else if (item.getTradetype().equals("微信"))
+                result.put("wechatpay", item.getNumber());
+            else
+                result.put("tenpay", item.getNumber());
+        }
+        return result;
+    }
+
+    @RequestMapping(value = "/userdistributioninfo", method = RequestMethod.GET)
+    @ResponseBody
+    public Object userDistributionInfo() {
+        List<CityUser> list = bankService.getCityUserList();
+        JSONArray result = new JSONArray();
+        for (CityUser item : list) {
+            JSONArray array = new JSONArray();
+            JSONObject obj = new JSONObject();
+            array.add(Float.valueOf(item.getyData()));
             array.add(Float.valueOf(item.getxData()));
             array.add(Float.valueOf(item.getCardAmount()));
-            obj.put("name",item.getCity());
-            obj.put("value",array);
-			result.add(obj);
-		}
-		return result;
-	}
+            obj.put("name", item.getCity());
+            obj.put("value", array);
+            result.add(obj);
+        }
+        return result;
+    }
 
-    @RequestMapping(value="/billdistributioninfo",method = RequestMethod.GET)
+    @RequestMapping(value = "/billdistributioninfo", method = RequestMethod.GET)
     @ResponseBody
     public Object billDistributionInfo() {
-        List<BillInfo> billInfoList=bankService.getBillInfoList();
-        JSONArray result=new JSONArray();
-        JSONArray depositList=new JSONArray();
-        JSONArray withdrawlList=new JSONArray();
-        for(BillInfo item:billInfoList){
-            JSONObject obj=new JSONObject();
-            obj.put("name",item.getProvince());
-            obj.put("value",item.getMoney());
-            if(item.getBillType()==1)
+        List<BillInfo> billInfoList = bankService.getBillInfoList();
+        JSONArray result = new JSONArray();
+        JSONArray depositList = new JSONArray();
+        JSONArray withdrawlList = new JSONArray();
+        for (BillInfo item : billInfoList) {
+            JSONObject obj = new JSONObject();
+            obj.put("name", item.getProvince());
+            obj.put("value", item.getMoney());
+            if (item.getBillType() == 1)
                 depositList.add(obj);
             else
                 withdrawlList.add(obj);
@@ -78,12 +79,12 @@ public class BankController {
     }
 
 
-    @RequestMapping(value="/consumptiontypeinfo",method = RequestMethod.GET)
+    @RequestMapping(value = "/consumptiontypeinfo", method = RequestMethod.GET)
     @ResponseBody
     public Object consumptionTypeInfo() {
         List<PersonalConsumption> list = bankService.getPersonalConsumptionList();
         JSONArray result = new JSONArray();
-        for(PersonalConsumption item : list) {
+        for (PersonalConsumption item : list) {
             JSONObject object = new JSONObject();
             object.put("name", item.getType());
             object.put("value", Double.valueOf(item.getValue()));
@@ -91,20 +92,21 @@ public class BankController {
         }
         return result;
     }
-    @RequestMapping(value = "/creditall",method=RequestMethod.GET)
+
+    @RequestMapping(value = "/creditall", method = RequestMethod.GET)
     @ResponseBody
-    public Object creditAll(){
+    public Object creditAll() {
         List<CreditAll> list = bankService.getCreditAllList();
         JSONArray result = new JSONArray();
-        for(CreditAll item : list){
+        for (CreditAll item : list) {
             JSONObject object = new JSONObject();
-            object.put("BillNumber",item.getBillNumber());
-            object.put("Account",item.getAccount());
-            object.put("Money",item.getMoney());
-            object.put("BillDate",item.getBillDate());
-            object.put("BillExInfo",item.getBillExInfo());
-            object.put("BillSite",item.getBillSite());
-            object.put("ExReason",item.getExReason());
+            object.put("BillNumber", item.getBillNumber());
+            object.put("Account", item.getAccount());
+            object.put("Money", item.getMoney());
+            object.put("BillDate", item.getBillDate());
+            object.put("BillExInfo", item.getBillExInfo());
+            object.put("BillSite", item.getBillSite());
+            object.put("ExReason", item.getExReason());
             result.add(object);
         }
 
@@ -113,36 +115,36 @@ public class BankController {
 
     @RequestMapping(value = "/creditone", method = RequestMethod.GET)
     @ResponseBody
-    public Object creditOne(String account){
+    public Object creditOne(String account) {
         List<CreditOne> list = bankService.getCreditOneList(account);
         JSONArray result = new JSONArray();
-        for(CreditOne item : list){
+        for (CreditOne item : list) {
             JSONObject object = new JSONObject();
-            object.put("BillNumber",item.getBillNumber());
-            object.put("Account",item.getAccount());
-            object.put("Money",item.getMoney());
-            object.put("BillDate",item.getBillDate());
-            object.put("BillExInfo",item.getBillExInfo());
-            object.put("BillSite",item.getBillSite());
-            object.put("ExReason",item.getExReason());
+            object.put("BillNumber", item.getBillNumber());
+            object.put("Account", item.getAccount());
+            object.put("Money", item.getMoney());
+            object.put("BillDate", item.getBillDate());
+            object.put("BillExInfo", item.getBillExInfo());
+            object.put("BillSite", item.getBillSite());
+            object.put("ExReason", item.getExReason());
             result.add(object);
         }
         return result;
     }
 
-    @RequestMapping(value = "/creditcity",method = RequestMethod.GET)
+    @RequestMapping(value = "/creditcity", method = RequestMethod.GET)
     @ResponseBody
-    public Object creditCity(){
+    public Object creditCity() {
         List<CreditCity> list = bankService.getCreditCityList();
         JSONArray result = new JSONArray();
-        for(CreditCity item: list){
+        for (CreditCity item : list) {
             JSONArray array = new JSONArray();
             JSONObject object = new JSONObject();
             array.add(item.getyData());
             array.add(item.getxData());
             array.add(item.getAmount());
-            object.put("name",item.getCity());
-            object.put("value",array);
+            object.put("name", item.getCity());
+            object.put("value", array);
             result.add(object);
         }
         return result;
@@ -150,13 +152,13 @@ public class BankController {
 
     @RequestMapping(value = "/company", method = RequestMethod.GET)
     @ResponseBody
-    public Object timeSeries(){
+    public Object timeSeries() {
         List<TimeSeries> list = bankService.getTimeSeriesList();
         JSONArray result = new JSONArray();
-        for(TimeSeries item : list){
+        for (TimeSeries item : list) {
             JSONObject object = new JSONObject();
-            object.put("date",item.getTime());
-            object.put("value",item.getData());
+            object.put("date", item.getTime());
+            object.put("value", item.getData());
             result.add(object);
         }
         return result;
@@ -164,32 +166,52 @@ public class BankController {
 
     @RequestMapping(value = "/personas", method = RequestMethod.GET)
     @ResponseBody
-    public Object personas(String purpose){
-            List<Personas> list = bankService.getPersonasList(purpose);
+    public Object personas(String purpose) {
+        switch (purpose) {
+            case "shopping":
+                purpose = "购物";
+                break;
+            case "qq":
+                purpose = "QQ充值";
+                break;
+            case "we":
+                purpose = "水电费";
+                break;
+            case "food":
+                purpose = "外卖";
+                break;
+            case "game":
+                purpose = "游戏";
+                break;
+            default:
+                break;
+        }
+        List<Personas> list = bankService.getPersonasList(purpose);
         JSONArray result = new JSONArray();
-        for(Personas item : list){
+        for (Personas item : list) {
             JSONObject object = new JSONObject();
-            object.put("account",item.getAccount());
+            object.put("account", item.getAccount());
 //            object.put("frequence",item.getFrequence());
             result.add(object);
         }
         return result;
     }
+
     @RequestMapping(value = "/testdata", method = RequestMethod.GET)
     @ResponseBody
     public Object testData() {
         List<TestData> list = bankService.getTestDataList("0");
         List<TestData> list2 = bankService.getTestDataList("1");
         JSONArray result = new JSONArray();
-        for(TestData item : list){
+        for (TestData item : list) {
             JSONObject obj = new JSONObject();
-            obj.put("id",item.getId());
+            obj.put("id", item.getId());
             obj.put("label", item.getLabel());
             obj.put("gender", item.getGender());
             obj.put("job", item.getJob());
             obj.put("education", item.getEducation());
             obj.put("marriage", item.getMarriage());
-            obj.put("residence",item.getResidence());
+            obj.put("residence", item.getResidence());
             obj.put("hits", item.getHits());
             obj.put("avg_last_bill_amount", item.getAvg_last_bill_amount());
             obj.put("avg_repayment_amount", item.getAvg_repayment_amount());
@@ -200,15 +222,15 @@ public class BankController {
             obj.put("repay_status", item.getRepay_status());
             result.add(obj);
         }
-        for(TestData item : list2){
+        for (TestData item : list2) {
             JSONObject obj = new JSONObject();
-            obj.put("id",item.getId());
+            obj.put("id", item.getId());
             obj.put("label", item.getLabel());
             obj.put("gender", item.getGender());
             obj.put("job", item.getJob());
             obj.put("education", item.getEducation());
             obj.put("marriage", item.getMarriage());
-            obj.put("residence",item.getResidence());
+            obj.put("residence", item.getResidence());
             obj.put("hits", item.getHits());
             obj.put("avg_last_bill_amount", item.getAvg_last_bill_amount());
             obj.put("avg_repayment_amount", item.getAvg_repayment_amount());
