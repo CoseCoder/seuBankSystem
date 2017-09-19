@@ -45,7 +45,7 @@ object Predict {
       "src/main/resources/data/scalaLogisticRegressionWithLBFGSModel")
 
     // Compute raw scores on the test set.
-    val predictionAndLabels = data.filter(_.label == 1).map { case LabeledPoint(label, features) =>
+    val predictionAndLabels = data.map { case LabeledPoint(label, features) =>
       val prediction = sameModel.predict(features)
       (prediction, label)
     }
