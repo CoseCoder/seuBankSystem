@@ -59,7 +59,7 @@ object Predict {
 
     //将得到的数据导入MySQL的数据表test_data中
 
-    var df = temp.toDF("prediction", "label", "gender", "job", "education", "marriage",
+    var df = temp.toDF("id", "label", "gender", "job", "education", "marriage",
       "residence", "hits", "avg_last_bill_amount", "avg_repayment_amount",
       "avg_credit_limit", "avg_balance", "avg_min_repay_amount", "bill_amount", "repay_status")
 
