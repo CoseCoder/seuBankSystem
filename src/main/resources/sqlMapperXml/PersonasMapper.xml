@@ -7,7 +7,7 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        Account,Frequence
+        Account
     </sql>
 
     <select id="getPersonasList" resultMap="BaseResultMap">

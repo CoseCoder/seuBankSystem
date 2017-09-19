@@ -20,6 +20,7 @@ function tradetypeinfo() {
 	$.ajax({
 		type:"GET",
 		url:"/report/tradetypeinfo",
+		data:"fromDate=2016-01&toDate=2016-12",
 		dataType:"json",
 		success:function(d){
 			showTradeTypeInfo(d.alipay,d.wechatpay,d.tenpay)
@@ -54,6 +55,7 @@ function consumptiontypeinfo(){
 	$.ajax({
 		type:"GET",
 		url:"/report/consumptiontypeinfo",
+		data:"cardNumber=6542661784689656633",
 		dataType:"json",
 		success:function(d){
 			showConsumptionTypeInfo(d)
@@ -160,6 +162,7 @@ function showUserDistributionInfo(d){
 function showBillDistributionInfo(d){
 	var billDistributionChart=echarts.init(document.getElementById('billDistributionChart'))
 	var option = {
+//	backgroundColor: '#EA7500',
 		tooltip : {
 			trigger: 'item'
 		},
@@ -176,18 +179,7 @@ function showBillDistributionInfo(d){
         text:['高','低'],           // 文本，默认为数值文本
         calculable : true
     },
-    /*toolbox: {
-    	show: true,
-    	orient : 'vertical',
-    	left: 'right',
-    	top: 'center',
-    	feature : {
-    		mark : {show: true},
-    		dataView : {show: true, readOnly: false},
-    		restore : {show: true},
-    		saveAsImage : {show: true}
-    	}
-    },*/
+
     series : [
     {
     	name: '支出',
@@ -315,21 +307,10 @@ function showcreditall(data) {
 
 
 
-    /*var oA = document.createElement('a');
-    oA.innerHTML = "删除";
-    oA.href = "javascript:;";
-    oTd.appendChild(oA);
-    oA.onclick = function () {
-      oTbody.removeChild(this.parentNode.parentNode);
-    }*/
+
   }
 }
 
-/*$("a").each(click(function(){
-var account=$(this).html();
-								   })
-)
-*/
 
 function creditcity() {
 	$.ajax({
@@ -346,14 +327,12 @@ function creditcity() {
 
 
 function showcreditcity(d){
+
 	var creditcityChart=echarts.init(document.getElementById('creditcityChart'))
 
-//	   $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
-//        creditcityChart.resize();
-//
-//    });
 
 	var option={
+//	backgroundColor: '#404a59',
 		legend:{
 			show:true,
 			data:['交易异常数量']
@@ -379,6 +358,7 @@ function showcreditcity(d){
 			map:'china',
 			name:"交易异常数量",
 			type:'scatter',
+			 roam: true,
 			coordinateSystem:'geo',
 			data:d
 		}],
@@ -467,10 +447,6 @@ companyChart.setOption(option)
 function showcompanytable(d) {
   var oTab = document.getElementById('companytable');
 
-//  var oTbody = oTab.tBodies[0];
-//
-//  var oTr = document.createElement('tr');
-//      oTbody.appendChild(oTr);
 
 var oTbody = oTab.tBodies[0];
 
@@ -784,12 +760,5 @@ oTd = document.createElement('td');
                 oTd.innerHTML = data[index].repay_status;
                 oTr.appendChild(oTd);
 
-    /*var oA = document.createElement('a');
-    oA.innerHTML = "删除";
-    oA.href = "javascript:;";
-    oTd.appendChild(oA);
-    oA.onclick = function () {
-      oTbody.removeChild(this.parentNode.parentNode);
-    }*/
   }
 }

@@ -1,22 +1,14 @@
 package group_seven.display.model;
 
 public class Personas {
-    private Long Account;
-//    private Integer Frequence;
+    private String Account;
 
-    public Long getAccount() {
+    public String getAccount() {
         return Account;
     }
 
-    public void setAccount(Long account) {
+    public void setAccount(String account) {
         Account = account;
     }
 
-//    public Integer getFrequence() {
-//        return Frequence;
-//    }
-//
-//    public void setFrequence(Integer frequence) {
-//        Frequence = frequence;
-//    }
 }
